@@ -19,7 +19,10 @@ function App() {
   async function loadFlags() {
     setStatus("loading");
     try {
-      const res = await fetch("https://flag-quiz-server.onrender.com/api/flags");
+      import { API_BASE } from "./config";
+
+      const res = await fetch(`${API_BASE}/api/flags`);
+
       const data = await res.json();
       setFlags(data);
       setStatus("ready");
