@@ -1,6 +1,7 @@
 // client/src/App.jsx
 import { useState, useEffect } from "react";
 import './App.css';
+import { API_BASE } from "./config";
 
 
 function App() {
@@ -19,7 +20,6 @@ function App() {
   async function loadFlags() {
     setStatus("loading");
     try {
-      import { API_BASE } from "./config";
 
       const res = await fetch(`${API_BASE}/api/flags`);
 
