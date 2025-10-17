@@ -60,7 +60,7 @@ res.json(pickRandom(flags, n).map(buildFlag));
 
 
 // Single question (1 correct + 3 distractors)
-app.get('/api/flags/question', (req, res) => {
+app.get('/api/countries', (req, res) => {
 const options = pickRandom(flags, 4);
 const correct = options[0];
 res.json({
@@ -72,3 +72,5 @@ options: shuffle(options.map(f => f.name))
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+
+export default app;
