@@ -90,6 +90,8 @@ function App() {
   useEffect(() => {
     // Uncomment if you want flags to load automatically on mount
     // loadFlags();
+    
+   
   }, []);
 
   return (
